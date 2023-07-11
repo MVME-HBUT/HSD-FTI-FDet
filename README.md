@@ -2,20 +2,18 @@
 # Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild
 This is the official implementation of the Advanced Engineering Informatics paper ["Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild"] ([https://arxiv.org/abs/2307.00701](https://arxiv.org/abs/2307.00701))
 
-This repo is based on [LD](https://github.com/HikariTJU/LD) and [MMdetection](https://github.com/open-mmlab/mmdetection).
-
 
 
 ## Introduction
 We design a lightweight and precise heterogeneous self-distillation framework for real-time fault detection on freight train images under strict resource constraints.
-html <div align="center"><img decoding="async" src="https://github.com/MVME-HBUT/HSD-FTI-FDet/blob/main/framework.jpg" width="75%"/> </div>
+<div align="center"><img decoding="async" src="https://github.com/MVME-HBUT/HSD-FTI-FDet/blob/main/framework.jpg" width="75%"/> </div>
 
 **Note:** The overall structure of our method. **HKN:** Heterogeneous Knowledge Neck. **HKH:** Heterogeneous Knowledge Head. During the backpropagation process, the regression loss is calculated by fault distribution loss **FD Loss** and fault regression loss **FR loss**. The classification loss is computed by fault classification loss **FC Loss**, and the distillation is computed by **Kullback-Leibler divergence**.
 
 
 
 ## Installation
-This codebase is built upon [MMdetection] 
+This codebase is built upon [MMDetection] 
 ([https://github.com/open-mmlab/mmdetection](https://github.com/facebookresearch/detectron2))
 
 ### Requirements
@@ -35,7 +33,16 @@ This codebase is built upon [MMdetection]
 
 
 
-## Train
+## Train and Evaluation
+
+### Training
+```
+#single GPU
+
+#multi GPU
+
+```
+### Evaluation
 ```
 #single GPU
 
@@ -45,12 +52,10 @@ This codebase is built upon [MMdetection]
 
 
 
-## Test
+## Convert model
+If you find the trained model very large, please refer to publish_model.py
 ```
-#single GPU
-
-#multi GPU
-
+python tools/model_converters/publish_model.py your_model.pth your_new_model.pth
 ```
 
 
@@ -71,3 +76,11 @@ This codebase is built upon [MMdetection]
       primaryClass={cs.CV}
 }
 ```
+
+## Acknowledgements
+We learn and use some parts of the codes from the following projects. We thank these excellent works:
+* [LD](https://github.com/HikariTJU/LD): Localization Distillation for Object Detection, CVPR 2022.
+* [MMDetection](https://github.com/facebookresearch/detectron2). An open source object detection toolbox based on PyTorch. 
+
+
+
