@@ -9,7 +9,7 @@ This repo is based on [LD](https://github.com/HikariTJU/LD) and [MMdetection](ht
 ## Introduction
 We design a lightweight and precise heterogeneous self-distillation framework for real-time fault detection on freight train images under strict resource constraints.
 
-![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)
+![RUNOOB 图标](https://github.com/MVME-HBUT/HSD-FTI-FDet/blob/main/framework.jpg)
 
 **Note:** The overall structure of our method. **HKN:** Heterogeneous Knowledge Neck. **HKH:** Heterogeneous Knowledge Head. During the backpropagation process, the regression loss is calculated by fault distribution loss **FD Loss** and fault regression loss **FR loss**. The classification loss is computed by fault classification loss **FC Loss**, and the distillation is computed by **Kullback-Leibler divergence**.
 
