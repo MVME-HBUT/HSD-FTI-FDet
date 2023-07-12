@@ -17,15 +17,15 @@ This codebase is built upon [MMDetection]
 ([https://github.com/open-mmlab/mmdetection](https://github.com/facebookresearch/detectron2))
 
 ### Requirements
-* Ubuntu 20.04 LTS, CUDA>=10.0, GCC>=5.4.0
-* Python>=3.6.12
-* Virtual environment via Anaconda (>=4.10.3) is recommended:
+* Ubuntu 20.04 LTS, CUDA>=10.1, GCC>=7.3.0
+* Python>=3.7.12
+* Virtual environment via Anaconda is recommended:
   Activate it by
   ```
   conda create -n HSD python=3.7
   ```
-* mmdetection==0.3
-* Pytorch>=1.7.1, torchvision>=0.8.2
+* mmdetection>=2.5.0
+* Pytorch>=1.6.0, torchvision>=0.7.0
 * Get into the HSD code directory (denoted by ${PROJ}).
   ```
   cd ${PROJ}
