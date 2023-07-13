@@ -13,7 +13,7 @@ We design a lightweight and precise heterogeneous self-distillation framework fo
 
 ## Installation
 This codebase is built upon [MMDetection] 
-([https://github.com/open-mmlab/mmdetection](https://github.com/facebookresearch/detectron2))
+([https://github.com/open-mmlab/mmdetection](https://github.com/facebookresearch/detectron2)). Please follow the installation of MMDetection following the official guide: [Installation](https://mmdetection.readthedocs.io/en/latest/get_started.html)  and make sure you can run it successfully.
 
 ### Requirements
 * Ubuntu 20.04 LTS, CUDA>=10.1, GCC>=7.3.0
@@ -23,7 +23,9 @@ This codebase is built upon [MMDetection]
   ```
   conda create -n HSD python=3.7
   ```
-* mmdetection>=2.5.0
+* This repo uses mmdetection==2.5.0 and mmcv==1.1.5.
+* If you want to use higher mmdet version, you may have to change the optimizer in apis/train.py and build_detector in tools/train.py.
+* For mmdet>=2.12.0, if you want to use inheriting strategy, you have to initalize the student with teacher's parameters after model.init_weights().
 * Pytorch>=1.6.0, torchvision>=0.7.0
 * Get into the HSD code directory (denoted by ${PROJ}).
   ```
@@ -52,7 +54,7 @@ bash ./dist_train_demo.sh configs/hsd/hsd_gflv1_r18_r18_fpn_BBK_2x.py 2
 
 
 ## Convert model
-If you find the trained model very large, please refer to publish_model.py
+If you find the trained model very large, please refer to [publish_model.py](https://github.com/MVME-HBUT/HSD-FTI-FDet/blob/main/tools/publish_model.py)
 ```
 python tools/publish_model.py your_model.pth your_new_model.pth
 ```
