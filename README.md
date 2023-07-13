@@ -1,4 +1,3 @@
-
 # Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild
 This is the official implementation of the Advanced Engineering Informatics paper ["Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild"] ([https://arxiv.org/abs/2307.00701](https://arxiv.org/abs/2307.00701))
 
@@ -38,16 +37,16 @@ This codebase is built upon [MMDetection]
 ### Training
 ```
 #single GPU
-
+python tools/train.py configs/hsd/hsd_gflv1_r18_r18_fpn_BBK_2x.py
 #multi GPU
-
+bash ./tools/dist_train.sh configs/hsd/hsd_gflv1_r18_r18_fpn_BBK_2x.py 2
 ```
 ### Evaluation
 ```
 #single GPU
-
+python tools/demo_batch.py configs/hsd/hsd_gflv1_r18_r18_fpn_BBK_2x.py 1
 #multi GPU
-
+bash ./dist_train_demo.sh configs/hsd/hsd_gflv1_r18_r18_fpn_BBK_2x.py 2
 ```
 
 
@@ -55,14 +54,8 @@ This codebase is built upon [MMDetection]
 ## Convert model
 If you find the trained model very large, please refer to publish_model.py
 ```
-python tools/model_converters/publish_model.py your_model.pth your_new_model.pth
+python tools/publish_model.py your_model.pth your_new_model.pth
 ```
-
-
-
-## Main Result
-
-
 
 
 ## Citation
