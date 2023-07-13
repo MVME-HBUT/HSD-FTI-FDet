@@ -86,7 +86,7 @@ model = dict(
         feat_channels=256,
         teacher_config='configs/gfl/gfl_r18_fpn_20e_BBK_20e.py',
         teacher_model=
-        'checkpoints/gfl_r18_fpn_20e_BBK_20e.pth',
+        'checkpoints/Teacher.pth',
         anchor_generator=dict(
             type='AnchorGenerator',
             ratios=[1.0],
