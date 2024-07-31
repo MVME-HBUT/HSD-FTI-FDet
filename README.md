@@ -1,5 +1,5 @@
 # Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild
-This is the official implementation of the Advanced Engineering Informatics paper ["Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild"] ([https://arxiv.org/abs/2307.00701](https://arxiv.org/abs/2307.00701))
+This is the official implementation of the Advanced Engineering Informatics paper: [Efficient Visual Fault Detection for Freight Train Braking System via Heterogeneous Self Distillation in the Wild.](https://www.sciencedirect.com/science/article/abs/pii/S1474034623002197)
 
 
 
@@ -12,8 +12,7 @@ We design a lightweight and precise heterogeneous self-distillation framework fo
 
 
 ## Installation
-This codebase is built upon [MMDetection] 
-([https://github.com/open-mmlab/mmdetection](https://github.com/facebookresearch/detectron2)). Please follow the installation of MMDetection following the official guide: [Installation](https://mmdetection.readthedocs.io/en/latest/get_started.html)  and make sure you can run it successfully.
+This codebase is built upon [MMDetection](https://github.com/open-mmlab/mmdetection). Please follow the installation of MMDetection following the official guide: [Installation](https://mmdetection.readthedocs.io/en/latest/get_started.html)  and make sure you can run it successfully.
 
 ### Requirements
 * Ubuntu 20.04 LTS, CUDA>=10.1, GCC>=7.3.0
